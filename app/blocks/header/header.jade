@@ -1,22 +1,23 @@
-//- include ../icon/icon
+include ../icon/icon
 
 mixin header()
 	header.header&attributes(attributes)
 		.header__top
 			.header__video.video
-				video.video__object( playsinline muted loop autoplay)
+				video.video__object( playsinline muted loop autoplay preload)
 					source(src='assets/video/header.webm', type='video/webm')
 					source(src='assets/video/header.mp4', type='video/mp4')
 					source(src='assets/video/header.ogv', type='video/ogv')
 
-				button.video__control Воспроизведение
+				button.video__control.video__control_pause Воспроизведение
 
 			.header__controls
 				a.header__controls-link(href="#") Регистрация
 				a.header__controls-link(href="#") войти
 
 			.header__in
-				a.header__logo.logo(href="#logo") Hackgames.su - лучшие приватные читы
+				a.header__logo.logo(href="#logo")
+					+icon('logo', true).logo__icon
 				a.header__button-down(href="#top") Вниз
 		#top.header__bottom
 			.header__in

@@ -1,16 +1,24 @@
 mixin section()
 	section.section&attributes(attributes)
-		.section__in(data-aos="fade-down" data-aos-duration="500" data-aos-easing="ease" data-aos-offset="-50")
+		.section__in
 			.section__social.section__social_youtube
 				.section__social-top
 					.section__title <span>наш канал</span> на youtube
 					.section__social-subscribe
-						img(src="assets/images/content/youtube-subscribe.jpg", alt="")
+						| <script src="https://apis.google.com/js/platform.js"></script>
+						| <div class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="full" data-count="default"></div>
+						//- img(src="assets/images/content/youtube-subscribe.jpg", alt="")
 				.section__social-body
 					.section__social-player
-						img(src="assets/images/content/youtube-player.jpg", alt="")
+						| <iframe src="https://www.youtube.com/embed/EfETaxQgywc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						//- img(src="assets/images/content/youtube-player.jpg", alt="")
 
 			.section__social.section__social_vk
 				.section__title <span>наша группа</span> вконтакте
 				.section__social-body
-					img(src="assets/images/content/vk-widget.jpg", alt="")
+					| <script type="text/javascript" src="//vk.com/js/api/openapi.js?152"></script>
+					| <div id="vk_groups"></div>
+					| <script type="text/javascript">
+					| VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, no_cover: 1, height: "437"}, 20003922);
+					| </script>
+					//- img(src="assets/images/content/vk-widget.jpg", alt="")

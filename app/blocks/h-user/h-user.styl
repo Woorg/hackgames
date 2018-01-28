@@ -70,7 +70,7 @@
 		visibility hidden
 		background-image linear-gradient(-266deg, #439ccc 0%, #0a78c0 100%)
 		border-radius 0 0 15px 15px
-		// tr(all .1s ease)
+		// tr(all .1s linear)
 		&:before
 			position absolute
 			top 0
@@ -86,25 +86,34 @@
 		visibility visible
 		opacity 1
 		tr(all .6s ease)
-		// .h-user__list
-		// 	opacity 1
-		// 	visibility visible
-		// 	tr(all .6s ease)
+		.h-user__list
+			z-index 0
+			height 114px
+			opacity 1
+			visibility visible
+			tr(opacity 1.1s linear)
 
-	// &__list
-	// 	visibility hidden
-	// 	opacity 0
+	&__list
+		position relative
+		z-index -100
+		height 0
+		visibility hidden
+		opacity 0
+		// tr(all .7s linear)
+
 	&__item
 		position relative
 		margin-bottom 10px
 		padding-left 34px
 		&:after
 			position absolute
-			top 0
+			top 50%
 			left 0
 			content ""
+			transform translateY(-50%)
 	&__item_profile
 		&:after
+			left 2px
 			retinaSprite($user_icon_group)
 	&__item_messages
 		&:after
@@ -114,6 +123,7 @@
 			retinaSprite($wallet_icon_group)
 	&__item_logout
 		&:after
+			left 2px
 			retinaSprite($logout_icon_group)
 	&__link
 		font-size 18px
@@ -121,4 +131,4 @@
 		text-decoration none
 		color #FFF
 		&:hover
-			text-decoration underline
+			text-decoration none

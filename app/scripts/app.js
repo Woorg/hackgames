@@ -28,7 +28,7 @@ import AOS from 'aos';
 		let hBottom = $('.header__bottom').outerHeight();
 
 		$(window).scroll(function () {
-			if ($(window).scrollTop() >= videoHeight ) {
+			if ($(window).scrollTop() > videoHeight ) {
 				$('.header').css('paddingTop', hBottom);
 				$('.header__bottom').addClass('header__bottom_fixed');
 			} else {
@@ -100,6 +100,7 @@ import AOS from 'aos';
 
 
 		$('.header__button-down').on('click', function(e) {
+			e.preventDefault();
 			var _scroll = $(this).attr('href');
 			if (_scroll != '#' && $(_scroll).length) {
 				$('html, body').animate({ scrollTop: $(_scroll).offset().top }, 800);

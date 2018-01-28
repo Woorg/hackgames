@@ -10,7 +10,7 @@
 		min-height 100%
 		width auto
 		height auto
-		background #0096e3 url('../images/content/hero-img.jpg') 0 0 no-repeat
+		background url('../images/content/hero-img.jpg') 0 0 no-repeat
 		background-size cover
 		transform translate(-50%, -50%)
 	&__control
@@ -42,4 +42,4 @@
 	&__control_pause
 		&:after
 			retinaSprite($pause_icon_group)
-			transform translate(calc(-50% - 1px), calc(-50% - 1px))
+			transform translate(calc(-50% + 1px), calc(-50% - 0px))

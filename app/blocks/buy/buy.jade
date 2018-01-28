@@ -1,7 +1,7 @@
 mixin buy()
 	section.buy&attributes(attributes)
-		.buy__in(data-aos="fade-down" data-aos-duration="500" data-aos-easing="ease" data-aos-offset="300")
-			h1.buy__title Купить читы
+		.buy__in
+			h1.buy__title(data-aos="fade-down" data-aos-duration="500" data-aos-easing="ease" data-aos-offset="300") Купить читы
 			.buy__carousel.carousel
 				ul.buy__list.carousel__list
 					li.buy__item
@@ -18,6 +18,10 @@ mixin buy()
 					li.buy__item
 						a.buy__link(href="#link")
 							figure.buy__image
+								.buy__badge
+									.buy__badge-text
+										span 20%
+										| скидка
 								img(src="assets/images/content/game-img-2.jpg", alt="game title")
 							.buy__bottom
 								.buy__bottom-col

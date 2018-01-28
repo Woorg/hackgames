@@ -33,6 +33,9 @@
 			max-width 70%
 			+r($t)
 				max-width 60%
+			+r($m)
+				max-width 100%
+				display block
 	&__social_vk
 		margin-top 0
 		width 500px
@@ -55,15 +58,39 @@
 		span
 			color #1079b8
 
+
 	&__social-subscribe
 		position absolute
-		top -42px
+		top -19px
 		right -18px
 		width 224px
 		height 72px
+		+r($m)
+			position static
 	&__social-player
+		position relative
 		min-height 425px
+		+r($t)
+			min-height 425px
 		img
+
 			display block
 			max-width 100%
 			height auto
+		iframe
+			position absolute
+			top 0
+			right 0
+			bottom 0
+			width 100%
+			height 100%
+
+	&__social-body
+		position relative
+		iframe
+			position absolute
+			top 0
+			right 0
+			bottom 0
+			width 100%
+			height 100%

@@ -43,13 +43,13 @@
 			// opacity 0.78
 			text-indent -9999px
 			tr(all .3s ease)
-			transform translateY(calc(-50% - 70px))
+			transform translateY(calc(-50% - 32px))
 			&:after
 				position absolute
 				top 50%
 				left 50%
 				content ""
-				transform translate(-50%, -50%)
+				transform translate(calc(-50% + 1px), -50%)
 			&:hover
 				background-color darken(#4597c8, 10)
 				background-image linear-gradient(to right, darken(#1077b6, 10) 0%, darken(#117ab9, 10) 100%)
@@ -60,7 +60,7 @@
 				left 30px
 			&:after
 				retinaSprite($arrow_right_group)
-				transform translate(-50%, -50%) rotate(180deg)
+				transform translate(calc(-50% - 1px), -50%) rotate(180deg)
 
 		.slick-next
 			right -40px
@@ -89,9 +89,13 @@
 		position relative
 		margin-bottom 26px
 		width 226px
-		height 226px
-		background-color rgba(24, 130, 198, 0.69)
+		height 224px
+		// background-color rgba(24, 130, 198, 0.69)
 		box-shadow 5px 2px 29px rgba(0, 0, 0, 0.3)
+		transform scale(1)
+		tr(all .3s ease)
+		&:hover
+			transform scale(1.1)
 		img
 			position absolute
 			top 50%
@@ -99,6 +103,40 @@
 			max-width 100%
 			height auto
 			transform translate(-50%, -50%)
+	&__badge
+		position absolute
+		z-index 1
+		top 0
+		left 0
+		width 78px
+		height 69px
+		background url('../images/general/badge.png') 0 0 no-repeat
+		color #fdfdfd
+		font-family $rR
+		font-size 10px
+		line-height 1
+	&__badge-text
+		position absolute
+		// top 18px
+		// left 0
+		// transform rotate(-42deg)
+		// text-align center
+		// line-height 1
+		top -3px
+		left 2px
+		right 0
+		text-align left
+		line-height 1
+		transform rotate(-42deg)
+		text-transform uppercase
+		span
+			padding-left 5px
+			display block
+			font-family $rB
+			font-size 14px
+			line-height 1
+			text-transform uppercase
+
 	&__bottom
 		font-size 0
 		white-space nowrap
