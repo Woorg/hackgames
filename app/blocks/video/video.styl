@@ -1,0 +1,45 @@
+.video
+	position relative
+	height 100%
+	&__object
+		position absolute
+		z-index -1
+		top 50%
+		left 50%
+		min-width 100%
+		min-height 100%
+		width auto
+		height auto
+		background #0096e3 url('../images/content/hero-img.jpg') 0 0 no-repeat
+		background-size cover
+		transform translate(-50%, -50%)
+	&__control
+		position absolute
+		left 79px
+		bottom 38px
+		border none
+		width 67px
+		height 67px
+		background-color #ffffff
+		border-radius 50%
+		opacity .47
+		hide-text()
+		tr(all .3s ease)
+		+r($l)
+			left 10px
+		+r($t)
+			width 33px
+			height 33px
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			retinaSprite($play_icon_group)
+			content ""
+			transform translate(calc(-50% + 2px), -50%)
+		&:hover
+			opacity 1
+	&__control_pause
+		&:after
+			retinaSprite($pause_icon_group)
+			transform translate(calc(-50% - 1px), calc(-50% - 1px))

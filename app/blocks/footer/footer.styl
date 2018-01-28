@@ -1,0 +1,87 @@
+.footer
+	display block
+	background-image linear-gradient(to right, #0b0b0b 0%, #575757 47%, #0b0b0b 100%)
+	box-shadow -11px 37px 62px rgba(0, 0, 0, 0.25)
+	&__in
+		padding-top 40px
+		@extends .in
+		width 1544px
+		padding-bottom 30px
+		color #FFF
+		clr()
+		+r(1544px)
+			width 100%
+	&__col
+		display inline-block
+		vertical-align middle
+	&__col_first
+		float left
+		+r($l)
+			margin-bottom 10px
+			float none
+	&__col_second
+		float right
+		+r($l)
+			float none
+	&__legal
+		margin-right 132px
+		+r(1050px)
+			margin-right 10px
+		+r($t)
+			margin-bottom 10px
+	&__legal-item
+		margin-bottom 2px
+		display block
+	&__legal-link
+		font-size 18px
+		line-height 1.111
+		color #FFF
+		text-decoration none
+		&:hover
+			text-decoration underline
+	&__legal,
+	&__social
+		display inline-block
+		vertical-align middle
+
+	// &__social
+
+	&__logo,
+	&__copyright
+		margin-top 7px
+		display inline-block
+		vertical-align middle
+	&__logo
+		padding-right 18px
+		font-family $pBI
+		font-size 18px
+		text-transform uppercase
+		color #FFF
+		text-decoration none
+	&__copyright
+		font-size 18px
+		line-height 1
+
+.social
+	font-size 0
+	&__item
+		margin-right 16px
+		display inline-block
+		vertical-align middle
+		&:last-child
+			margin-right 0
+	&__item_1
+		.social__link
+			retinaSprite($vk_group)
+	&__item_2
+		.social__link
+			retinaSprite($youtube_group)
+	&__item_3
+		.social__link
+			retinaSprite($gplus_group)
+	&__item_4
+		.social__link
+			retinaSprite($telegram_group)
+	&__link
+		display block
+		hide-text()

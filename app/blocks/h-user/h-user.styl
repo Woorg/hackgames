@@ -1,0 +1,124 @@
+.h-user
+	position relative
+	margin-top -9px
+	margin-bottom -16px
+	padding-top 8px
+	padding-bottom 13px
+	min-width 158px
+	+r(538px)
+		width 48%
+		margin-right 0
+	+r($m)
+		min-width 120px
+		width 30%
+	&__top
+		background-color #ffffff
+		height 40px
+		font-size 0
+		cursor pointer
+		border-radius 5px
+		box-shadow 5px 2px 21px rgba(0, 0, 0, 0.23)
+	&__pic,
+	&__name
+		display inline-block
+		vertical-align middle
+	&__pic
+		margin-top -8px
+		margin-right 16px
+		margin-left -25px
+		width 51px
+		height 51px
+		border-radius 50%
+		box-shadow 5px 2px 21px rgba(0, 0, 0, 0.19)
+	&__name
+		position relative
+		padding-right 19px
+		font-family $fS
+		font-size 26px
+		line-height 1.2
+		text-transform uppercase
+		color #1070ad
+		max-width 180px
+		overflow hidden
+		text-overflow ellipsis
+		white-space nowrap
+		+r($m)
+			font-size 16px
+		&:after
+			position absolute
+			top 50%
+			right 0
+			margin-top -3px
+			width 0
+			height 0
+			border-style solid
+			border-width 7px 5.5px 0 5.5px
+			border-color #1070ad transparent transparent transparent
+			content ""
+	&__controls
+		position absolute
+		z-index -10
+		top 0
+		right -113px
+		padding-top 20px
+		padding-right 20px
+		padding-bottom 20px
+		padding-left 20px
+		width 250px
+		height 0
+		opacity 0
+		visibility hidden
+		background-image linear-gradient(-266deg, #439ccc 0%, #0a78c0 100%)
+		border-radius 0 0 15px 15px
+		// tr(all .1s ease)
+		&:before
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 21px
+			background url('../images/general/h-user-shadow.png') 0 0 repeat-x
+			content ""
+	&__controls_active
+		top	calc(100% - 1px)
+		z-index 0
+		height 150px
+		visibility visible
+		opacity 1
+		tr(all .6s ease)
+		// .h-user__list
+		// 	opacity 1
+		// 	visibility visible
+		// 	tr(all .6s ease)
+
+	// &__list
+	// 	visibility hidden
+	// 	opacity 0
+	&__item
+		position relative
+		margin-bottom 10px
+		padding-left 34px
+		&:after
+			position absolute
+			top 0
+			left 0
+			content ""
+	&__item_profile
+		&:after
+			retinaSprite($user_icon_group)
+	&__item_messages
+		&:after
+			retinaSprite($email_icon_group)
+	&__item_bank
+		&:after
+			retinaSprite($wallet_icon_group)
+	&__item_logout
+		&:after
+			retinaSprite($logout_icon_group)
+	&__link
+		font-size 18px
+		line-height 1.2
+		text-decoration none
+		color #FFF
+		&:hover
+			text-decoration underline

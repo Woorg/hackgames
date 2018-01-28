@@ -1,0 +1,67 @@
+.guarantees
+	display block
+	background #0479BB url('../images/general/guarantee-bg.jpg') 50% 0 no-repeat
+	background-size cover
+	&__in
+		@extends .in
+		padding-top 63px
+		padding-bottom 13px
+		color #ffffff
+	&__title
+		@extends .title
+		margin-bottom 39px
+		color #FFF
+		text-align center
+	&__row-w
+		overflow hidden
+		text-align center
+	&__row
+		margin-right -50px
+		display inline-block
+		vertical-align top
+		text-align left
+		clr()
+		+r($l)
+			margin-right 0
+	&__col
+		margin-right 50px
+		display inline-block
+		vertical-align top
+		// width 550px
+		width 45%
+		// width ratio-percentage(550, 1344)
+		clr()
+		+r($d)
+			margin-right 30px
+			width 45%
+		+r($l)
+			margin-right 0
+			width 100%
+	&__text
+		margin-bottom 12px
+		font-size 18px
+		line-height 1.222
+		color #fff
+		strong
+			font-family $pBI
+			text-transform uppercase
+
+	&__note
+		position relative
+		margin-right 17px
+		padding-bottom 48px
+		float right
+		width 185px
+		font-family $rM
+		font-size 18px
+		&:after
+			position absolute
+			top -12px
+			right -32px
+			retinaSprite($stamp_group)
+			content ""
+		+r($l)
+			margin-right 30px
+	&__note-w
+		position relative
+		z-index 1

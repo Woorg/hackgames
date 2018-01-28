@@ -1,0 +1,69 @@
+.section
+	display block
+	background #fff url('../images/general/social-bg.jpg') 50% 50% no-repeat
+	background-size cover
+	overflow hidden
+	&__in
+		@extends .in
+		padding-top 105px
+		padding-bottom 120px
+		+r($l)
+			padding-top 52px
+			padding-bottom 60px
+	&__social
+		margin-right 98px
+		display inline-block
+		vertical-align top
+		+r($l)
+			margin-right 0
+		&:last-child
+			margin-right 0
+	&__social_youtube
+		width 650px
+		width ratio-percentage(650,1344)
+		+r($l)
+			margin-bottom 20px
+			width 100%
+		.section__title,
+		.section__social-subscribe
+			display inline-block
+			vertical-align bottom
+		.section__title
+			margin-bottom 0
+			max-width 70%
+			+r($t)
+				max-width 60%
+	&__social_vk
+		margin-top 0
+		width 500px
+		width ratio-percentage(500,1344)
+		+r($l)
+			width 100%
+		.section__title
+			margin-bottom 25px
+	&__social-top
+		position relative
+		margin-bottom 16px
+		// clr()
+	&__title
+		@extends .title
+		font-size 31px
+		color #353535
+		// float left
+		+r($t)
+			font-size 19px
+		span
+			color #1079b8
+
+	&__social-subscribe
+		position absolute
+		top -42px
+		right -18px
+		width 224px
+		height 72px
+	&__social-player
+		min-height 425px
+		img
+			display block
+			max-width 100%
+			height auto

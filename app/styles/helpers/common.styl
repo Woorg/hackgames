@@ -1,0 +1,90 @@
+.page
+	position relative
+	background #fff
+	font-display swap
+	font-family $rR
+	font-weight normal
+	font-size 16px
+	color #020515
+	line-height 1.11111111111111
+	letter-spacing tracking(-25, 16)
+	tr(font-size .3s ease)
+
+.in
+	margin auto
+	padding-left 45px
+	padding-right 45px
+	max-width 100%
+	width 1344px
+	// min-width 320px
+	+r($t)
+		padding-left 10px
+		padding-right 10px
+.title
+	margin-bottom 49px
+	font-family $rB
+	font-size 36px
+	line-height 1.11111111111111
+	text-transform uppercase
+	+r($t)
+		font-size 22px
+.subtitle
+	font-size 24px
+	font-weight 700
+	text-transform uppercase
+	letter-spacing tracking(-25, 24)
+	+r($l)
+		font-size 15px
+	+r($t)
+		font-size 14px
+img
+	display block
+	max-width 100%
+	height auto
+
+.wysiwyg
+	h1,
+	h2
+		margin-top 0
+		margin-bottom 50px
+		font-size 36px
+		font-weight 700
+		text-transform uppercase
+		line-height 46px
+		letter-spacing tracking(-25, 36)
+		+r($l)
+			margin-bottom 31px
+			font-size 22px
+			line-height 29px
+		+r($t)
+			margin-bottom 19px
+			font-size 14px
+			line-height 18px
+	h3,
+	h4
+		margin-bottom 50px
+		font-size 24px
+		font-weight 700
+		text-transform uppercase
+		letter-spacing tracking(-25, 24)
+		+r($l)
+			margin-bottom 31px
+			font-size 15px
+		+r($t)
+			margin-bottom 19px
+	ul
+		margin-left 0
+		margin-bottom 50px
+
+	p
+		margin-bottom 50px
+		font-size 16px
+		line-height 26px
+		letter-spacing tracking(-25, 16)
+		&:last-child
+			margin-bottom 0
+		+r($l)
+			margin-bottom 31px
+		+r($t)
+			margin-bottom 19px
+			font-size 14px

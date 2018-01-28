@@ -1,0 +1,58 @@
+//- include ../icon/icon
+
+mixin header()
+	header.header&attributes(attributes)
+		.header__top
+			.header__video.video
+				video.video__object( playsinline muted loop autoplay)
+					source(src='assets/video/header.webm', type='video/webm')
+					source(src='assets/video/header.mp4', type='video/mp4')
+					source(src='assets/video/header.ogv', type='video/ogv')
+
+				button.video__control Воспроизведение
+
+			.header__controls
+				a.header__controls-link(href="#") Регистрация
+				a.header__controls-link(href="#") войти
+
+			.header__in
+				a.header__logo.logo(href="#logo") Hackgames.su - лучшие приватные читы
+				a.header__button-down(href="#top") Вниз
+		#top.header__bottom
+			.header__in
+				a.header__logo-sec(href="#link") Hackgames
+				nav.header__nav.nav
+					label.nav__button(for="navTrigger") Меню
+					input#navTrigger.nav__checkbox(type="checkbox")
+					ul.nav__list
+						li.nav__item.nav__item_active
+							a.nav__link(href="#link-1") главная
+						li.nav__item
+							a.nav__link(href="#link-2") новости
+						li.nav__item
+							a.nav__link(href="#link-3") как купить
+						li.nav__item
+							a.nav__link(href="#link-4") помощь
+						li.nav__item
+							a.nav__link(href="#link-5") сотрудничество
+				.header__right
+					.header__user.h-user
+						.h-user__top
+							.h-user__pic(style="background-image: url('assets/images/content/user-pic.jpg');")
+							.h-user__name tom227
+						.h-user__controls
+							ul.h-user__list
+								li.h-user__item.h-user__item_profile
+									a.h-user__link(href="#link") Мой профиль
+								li.h-user__item.h-user__item_messages
+									a.h-user__link(href="#link") Личные сообщения
+								li.h-user__item.h-user__item_bank
+									a.h-user__link(href="#link") Пополнить счет
+								li.h-user__item.h-user__item_logout
+									a.h-user__link(href="#link") Выход
+
+					a.header__cart(href="#cart")
+						//- .header__cart-icon
+						.header__cart-val 500
+							.header__cart-rub рублей
+

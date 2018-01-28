@@ -1,0 +1,97 @@
+.nav
+	position relative
+	max-width 850px
+	+r(538px)
+		margin-bottom 20px
+		max-width 100%
+		width 100%
+	&__button
+		padding-top 5px
+		padding-right 16px
+		padding-bottom 4px
+		padding-left 16px
+		display none
+		background rgba(255,255,255, .24)
+		color #FFF
+		font-family $rM
+		font-size 20px
+		line-height 1
+		cursor pointer
+		tr(all .3s ease)
+		&:hover
+			background transparent
+		+r(1280px)
+			display inline-block
+			vertical-align middle
+		+r(538px)
+			display block
+	&__checkbox
+		display none
+		+r(1280px)
+			&:checked +
+				.nav__list
+					position absolute
+					top calc(100% + 22px)
+					padding-top 20px
+					padding-left 10px
+					padding-right 10px
+					padding-bottom 10px
+					display block
+					background-image linear-gradient(-266deg, #439ccc 0%, #0a78c0 100%)
+					border-radius 0 0 15px 15px
+
+					&:before
+						position absolute
+						top 0
+						left 0
+						width 100%
+						height 21px
+						background url('../images/general/h-user-shadow.png') 0 0 repeat-x
+						content ""
+						+r(538px)
+							display none
+					.nav__item
+						width 100%
+
+		+r(538px)
+			&:checked +
+				.nav__list
+					position static
+					background transparent
+					&:before
+						display none
+
+	&__list
+		font-size 0
+		+r(1280px)
+			display none
+	&__item,
+	li
+		margin-right 26px
+		display inline-block
+		vertical-align middle
+		&.nav__item_active,
+		&:hover,
+		&:focus
+			.nav__link,
+			a
+				background rgba(255,255,255, .24)
+		&:last-child
+			margin-right 0
+
+	&__link,
+	a
+		padding-top 5px
+		padding-right 16px
+		padding-bottom 4px
+		padding-left 16px
+		display block
+		background transparent
+		color #FFF
+		font-family $rM
+		font-size 20px
+		line-height 1
+		text-decoration none
+		text-transform uppercase
+		letter-spacing tracking(10, 20)
+		tr(all .3s ease)
