@@ -109,7 +109,7 @@
 		text-transform uppercase
 		text-decoration none
 		tr(all .3s ease)
-		+r(1300px)
+		+r(1344px)
 			// margin-left 0
 			// margin-right 0
 			display none
@@ -153,8 +153,12 @@
 		font-size 26px
 		color #FFF
 		+r($t)
+			vertical-align top
 			font-size 20px
 	&__cart-rub
+		position relative
+		bottom -1px
+		margin-left 2px
 		retinaSprite($rub_group)
 		hide-text()
 

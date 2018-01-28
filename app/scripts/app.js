@@ -25,7 +25,7 @@ import AOS from 'aos';
 	$(function() {
 
 		let videoHeight = $('.video').outerHeight();
-		let hBottom = $('.header__bottom').height();
+		let hBottom = $('.header__bottom').outerHeight();
 
 		$(window).scroll(function () {
 			if ($(window).scrollTop() >= videoHeight ) {
@@ -39,6 +39,7 @@ import AOS from 'aos';
 		});
 
 		$(window).resize(function () {
+			hBottom = $('.header__bottom').outerHeight();
 			$(window).scroll(function () {
 				if ($(window).scrollTop() >= videoHeight ) {
 					$('.header').css('paddingTop', hBottom);
